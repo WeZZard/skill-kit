@@ -10,8 +10,9 @@ concurrency:
 jobs:
   propose:
     if: github.repository == 'WeZZard/skill-kit'
-    uses: WeZZard/workflows/.github/workflows/propose-release.yml@v1.0.0
+    uses: WeZZard/workflows/.github/workflows/propose-release.yml@v1.0.1
     with:
       version_file: .claude-plugin/plugin.json
     secrets:
       RELEASE_TOKEN: ${{ secrets.SKILL_KIT_RELEASE_TOKEN }}
+      OPENCODE_AUTH_JSON: ${{ secrets.OPENCODE_AUTH_JSON }}
